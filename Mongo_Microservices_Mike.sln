@@ -3,19 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mongo_Microservices_Mike", "Mongo_Microservices_Mike\Mongo_Microservices_Mike.csproj", "{720F7AD0-4DF9-4758-B1A3-A72EF7A4B08D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{D6C54EE6-A0B8-4FC8-A065-D05D7341B669}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{15094998-30E1-4876-8807-C3080E125334}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{C595065B-F5D9-4967-A540-8CF47EB68ECB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{086BF648-B3AB-4A2E-B13E-67982A2CC8F0}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{720F7AD0-4DF9-4758-B1A3-A72EF7A4B08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{720F7AD0-4DF9-4758-B1A3-A72EF7A4B08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{720F7AD0-4DF9-4758-B1A3-A72EF7A4B08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{720F7AD0-4DF9-4758-B1A3-A72EF7A4B08D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
