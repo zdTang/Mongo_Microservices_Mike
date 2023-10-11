@@ -1,4 +1,5 @@
 
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Mongo.Services.CouponAPI.Data;
 
@@ -20,7 +21,12 @@ namespace Mongo.Services.CouponAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            var app = builder.Build();
+
+			IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+			builder.Services.AddSingleton(mapper);                                   // Here register a Singleton to servicesCollection
+			builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // This one is for Dependency Injection
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

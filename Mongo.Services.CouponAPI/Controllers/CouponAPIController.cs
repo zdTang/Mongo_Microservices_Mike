@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mongo.Services.CouponAPI.Data;
 using Mongo.Services.CouponAPI.Models;
+using Mongo.Services.CouponAPI.Models.Dto;
 
 namespace Mongo.Services.CouponAPI.Controllers
 {
@@ -10,41 +12,47 @@ namespace Mongo.Services.CouponAPI.Controllers
 	public class CouponAPIController : ControllerBase
 	{
 		private readonly AppDbContext _db;
+		private ResponseDto _response;
+		private IMapper _mapper;
 
-		public CouponAPIController(AppDbContext db)
+		public CouponAPIController(AppDbContext db,IMapper mapper)
 		{
 			_db = db;
+			_mapper = mapper;
+			_response = new ResponseDto();
 		}
 
 		[HttpGet]
-		public object Get()
+		public ResponseDto Get()
 		{
 			try
 			{
 				IEnumerable<Coupon> objList = _db.Coupons.ToList();
-				return objList;
+				_response.Result = _mapper.Map<IEnumerable<CouponDto>>(objList);
 			}
 			catch (Exception ex)
 			{
-
+				_response.IsSuccess = false;
+				_response.Message = ex.Message;
 			}
-			return null;
+			return _response;
 		}
 
 		[HttpGet]
 		[Route("{id:int}")]
-		public object Get(int id)
+		public ResponseDto Get(int id)
 		{
 			try
 			{
-				Coupon objList = _db.Coupons.First(u => u.CouponId == id);
-				return objList;
+				Coupon obj = _db.Coupons.First(u => u.CouponId == id);
+				_response.Result = _mapper.Map<CouponDto>(obj);
 			}
 			catch (Exception ex)
 			{
-
+				_response.IsSuccess = false;
+				_response.Message = ex.Message;
 			}
-			return null;
+			return _response;
 		}
 	}
 }
