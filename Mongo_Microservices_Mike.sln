@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{086BF648-B3AB-4A2E-B13E-67982A2CC8F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mongo.Services.CouponAPI", "Mongo.Services.CouponAPI\Mongo.Services.CouponAPI.csproj", "{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mongo.Services.CouponAPI", "Mongo.Services.CouponAPI\Mongo.Services.CouponAPI.csproj", "{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{784F05B6-7C4D-4312-AFBA-2FEC97F27A59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784F05B6-7C4D-4312-AFBA-2FEC97F27A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784F05B6-7C4D-4312-AFBA-2FEC97F27A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784F05B6-7C4D-4312-AFBA-2FEC97F27A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784F05B6-7C4D-4312-AFBA-2FEC97F27A59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E50F9DAB-B84E-4096-8D4C-4EC26E0FB542} = {086BF648-B3AB-4A2E-B13E-67982A2CC8F0}
+		{784F05B6-7C4D-4312-AFBA-2FEC97F27A59} = {D6C54EE6-A0B8-4FC8-A065-D05D7341B669}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {652194B0-F966-4F4A-8157-9C6CA9D78BBA}
